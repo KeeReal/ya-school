@@ -15,5 +15,8 @@
     "mocha": "^3.4.2",
     "should": "^11.2.1",
     "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "email-validator": "^1.0.7"
   }
 }
