@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <style>
+            form, form div {
+                margin-bottom: 10px;
+            }
+
+            label {
+                width: 100px;
+                text-align: right;
+                padding-right: 6px;
+                display: inline-block;
+            }
+
+            input.error {
+                border: 1px solid red;
+            }
+
+
+            div#resultContainer {
+                border: 1px solid #b8b8b8;
+            }
+
+
+            div.error {
+                border-color: red !important;
+            }
+
+            div.success {
+                border-color: #00e200 !important;
+            }
+
+
+            div.progress {
+                border-color: #3c5de2 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myForm" action="./mock-responses/success.json" onsubmit="MyForm.submit(); return false;">
+            <div>
+                <label for="fio">fio</label>
+                <input type="text" id="fio" name="fio"/>
+            </div>
+
+            <div>
+                <label for="email">email</label>
+                <input type="email" id="email" name="email"/>
+            </div>
+
+
+            <div>
+                <label for="tel">tel</label>
+                <input type="tel" id="tel" name="tel"/>
+            </div>
+
+
+            <input id="submit" type="submit"/>
+        </form>
+
+
+        <div id="resultContainer">
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

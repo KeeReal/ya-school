@@ -2,6 +2,7 @@
 
 
 const emailValidator = require("email-validator");
+const consts = require("./consts");
 
 
 class ValidationResult {
@@ -34,6 +35,7 @@ class ValidationResult {
  * */
 exports.ValidationResult = ValidationResult;
 
+
 exports.REASONS = {
     FULL_NAME_TYPE: "fullname: invalid type",
     FULL_NAME_EMPTY: "fullname: empty string",
@@ -48,6 +50,28 @@ exports.REASONS = {
     TEL_FORMAT: "tel: invalid format",
     TEL_TYPE: "tel: invalid type",
     TEL_COUNT: "tel: invalid amount"
+};
+
+
+/**
+ * @param name
+ * @param value
+ * @returns {ValidationResult}
+ */
+exports.isFieldValueValid = (name, value) => {
+    switch (name) {
+
+        case consts.FIELD_NAMES.FIO:
+            return exports.isFullNameValid(value);
+            
+        case consts.FIELD_NAMES.EMAIL:
+            return exports.isEmailValid(value);
+            
+        case consts.FIELD_NAMES.TEL:
+            return exports.isTelValid(value);
+    }
+    
+    throw new Error(`Unknown field ${name}`);
 };
 
 

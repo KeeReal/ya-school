@@ -1,9 +1,5 @@
 "use strict";
 
 
-
-
-
-
-// function to validate form data
-// function to validate
+const MyForm = require("./my-form");
+module.exports = MyForm;
