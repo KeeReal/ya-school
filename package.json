@@ -1,17 +1,16 @@
 {
   "name": "ya_school",
   "version": "1.0.0",
-  "description": "",
+  "description": "a test task for yandex nodejs school",
   "main": "index.js",
   "directories": {
-    "doc": "docs"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --opts ./mocha.opts src/**/*.test.js",
     "build": "webpack && cp ./dist/bundle.js ./index.js",
     "start": "webpack-dev-server --open"
   },
-  "author": "",
+  "author": "Kirill Ponomarev <shacaron@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.4.2",
